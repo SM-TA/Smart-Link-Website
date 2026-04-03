@@ -2379,7 +2379,7 @@ select:visited {
 /*Newslatter area*/
 /*----------------------------------------------------*/
 .newslatter-section {
-  top: -100px;
+  top: 0px;
   position: relative; }
   .newslatter-section .newslatter-content {
     padding: 35px 0px;
