@@ -8,16 +8,29 @@
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="shortcut icon" href="assets/img/Favicon.png" type="image/x-icon">
 	<style>
 		.sls-hero {
 			padding: 180px 0 100px;
 			background: #003366;
 			color: #fff;
-			background-image: url('https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&w=1500&q=80');
+			position: relative;
+			overflow: hidden;
+		}
+
+		.sls-hero-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 			background-size: cover;
 			background-position: center;
-			position: relative;
+			z-index: 0;
 		}
+
+		html.lang-en .sls-hero-bg { background-image: url('assets/img/Titan/sls-hero-bg-en.png'); }
+		html:not(.lang-en) .sls-hero-bg { background-image: url('assets/img/Titan/sls-hero-bg-ja.png'); }
 
 		.sls-tag {
 			background: #FFBF00;
@@ -66,8 +79,9 @@
 	<header id="header_id" class="main_header header_style_one"></header>
 
 	<section class="sls-hero">
-		<div class="background_overlay" style="background: rgba(0,25,51,0.85); position: absolute; top:0; left:0; width: 100%; height:100%;"></div>
-		<div class="container position-relative">
+		<div class="sls-hero-bg"></div>
+		<div class="background_overlay" style="background: rgba(0,25,51,0.85); position: absolute; top:0; left:0; width: 100%; height:100%; z-index: 1;"></div>
+		<div class="container position-relative" style="z-index: 2;">
 			<div class="text-center">
 				<span class="sls-tag">
 					<i class="fas fa-microchip" style="margin-right: 8px;"></i>
@@ -108,7 +122,8 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<img src="https://images.unsplash.com/photo-1451187530220-4e2eb51450a1?auto=format&fit=crop&w=800&q=80" alt="Energy Data Analysis" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+					<img src="assets/img/Titan/sls-data-analysis-ja.png" alt="Energy Data Analysis" class="ja" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+					<img src="assets/img/Titan/sls-data-analysis-en.png" alt="Energy Data Analysis" class="en" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
 				</div>
 			</div>
 
