@@ -132,7 +132,10 @@ const B2B_HEADER_HTML = `
 						<img src="assets/img/logo/smart-link-logo.png" alt="Smart Link">
 						<span class="company-name">Smart Link</span>
 					</a>
-					<div class="importer-badge d-none d-md-inline-block">正規輸入販売元・日本国内PSE規格適合</div>
+					<div class="importer-badge d-none d-md-inline-block">
+						<span class="ja">正規輸入販売元・日本国内PSE規格適合</span>
+						<span class="en">Strategic Partner & PSE Certified</span>
+					</div>
 				</div>
 				<nav class="main_navigation desktop-menu ul-li">
 					<ul id="main-nav" class="navbar-nav text-uppercase clearfix">
