@@ -3,6 +3,17 @@
  * This script ensures the Header and Footer are consistent across all pages.
  */
 
+window.copyToClipboard = (text, btn) => {
+	navigator.clipboard.writeText(text).then(() => {
+		btn.classList.add('active');
+		setTimeout(() => {
+			btn.classList.remove('active');
+		}, 2000);
+	}).catch(err => {
+		console.error('Failed to copy: ', err);
+	});
+};
+
 // --- HELPER: COOKIE MANAGEMENT ---
 window.setLanguageCookie = (lang) => {
 	const d = new Date();
@@ -90,6 +101,36 @@ langStyles.innerHTML = `
 	/* Specialized visibility classes */
 	.lang-en .show-en { display: block !important; }
 	.lang-en .hide-en { display: none !important; }
+
+	/* Copy to Clipboard Tooltip */
+	.copy-tooltip {
+		position: relative;
+		cursor: pointer;
+		transition: color 0.3s ease;
+	}
+	.copy-tooltip:hover {
+		color: #0071c5 !important;
+	}
+	.copy-tooltip::after {
+		content: 'Copied!';
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		background: #333;
+		color: #fff;
+		padding: 5px 10px;
+		border-radius: 4px;
+		font-size: 12px;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease;
+	}
+	.copy-tooltip.active::after {
+		opacity: 1;
+		visibility: visible;
+		bottom: 120%;
+	}
 `;
 document.head.appendChild(langStyles);
 
@@ -100,7 +141,7 @@ const B2B_HEADER_HTML = `
 					<div class="col-md-6">
 						<div class="header_top_contact ul-li clearfix">
 							<ul>
-								<li> <i class="icon-envelope-letter"></i> Contactus@smartlinkco.jp</li>
+								<li> <i class="icon-envelope-letter"></i> <span class="copy-tooltip" onclick="window.copyToClipboard('Contactus@smartlinkco.jp', this)">Contactus@smartlinkco.jp</span></li>
 								<li class="lang-switcher-container" style="margin-left: 20px; display: inline-block; vertical-align: middle;">
 									<div class="lang-switch-pill" style="display: flex; background: rgba(0,0,0,0.2); border-radius: 20px; padding: 2px; border: 1px solid rgba(255,255,255,0.1);">
 										<a href="javascript:void(0)" onclick="setLanguage('ja')" id="btn-ja" style="padding: 2px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; color: #fff; background: #0fc5d3; transition: all 0.3s ease;">JP</a>
@@ -215,7 +256,7 @@ const B2B_FOOTER_HTML = `
 									</p>
 									<p style="margin-top: 15px;">
 										<i class="icon-envelope-letter" style="color: #0fc5d3; margin-right: 10px;"></i>
-										Contactus@smartlinkco.jp
+										<span class="copy-tooltip" onclick="window.copyToClipboard('Contactus@smartlinkco.jp', this)">Contactus@smartlinkco.jp</span>
 									</p>
 								</div>
 							</div>
