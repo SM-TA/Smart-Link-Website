@@ -33,7 +33,6 @@ Last change:    00/00/00
 				this.FeatureItemSlider();
 				this.partnerItemSlider();
 				this.scrollTop();
-				this.GoogleMap();
 			},
 			preloader: function (){
 				jQuery(window).on('load', function(){
@@ -80,6 +79,8 @@ Last change:    00/00/00
 					animateOut: 'fadeOut',
 					animateIn: 'fadeIn',
 					navText:["<i class='icon-arrow-left'></i>","<i class='icon-arrow-right'></i>"],
+					mouseDrag: false,
+					touchDrag: false,
 				});
 			},
 			bannerParalax: function (){
@@ -247,39 +248,6 @@ Last change:    00/00/00
 					}, 800);
 					return false;
 				});
-			},
-			GoogleMap: function (){
-				function isMobile() { 
-					return ('ontouchstart' in document.documentElement);
-				}
-				function init_gmap() {
-					if ( typeof google == 'undefined' ) return;
-					var options = {
-						center: [40.712784,-74.005941],
-						zoom: 10,
-						mapTypeControl: true,
-						mapTypeControlOptions: {
-							style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-						},
-						navigationControl: true,
-						scrollwheel: false,
-						streetViewControl: true,
-					}
-					if (isMobile()) {
-						options.draggable = false;
-					}
-					$('#googleMaps').gmap3({
-						map: {
-							options: options
-						},
-						marker: {
-							latLng: [40.712776,-74.005974],
-							options: { icon: 'assets/img/map.png' }
-
-						}
-					});
-				}
-				init_gmap();
 			},
 		}
 	}
