@@ -200,12 +200,8 @@ const B2B_HEADER_HTML = `
 										<li><a href="regenerative-ac.html"><span class="ja">技術・製品詳細</span><span class="en">Technology Details</span></a></li>
 									</ul>
 								</li>
-								<li class="dropdown">
-									<a href="software.html"><span class="ja">ソフトウェア</span><span class="en">Software</span></a>
-									<ul class="dropdown-menu clearfix">
-										<li><a href="operational-opt.html"><span class="ja">運用最適化</span><span class="en">Operational Opt</span></a></li>
-										<li><a href="ems-tools.html"><span class="ja">EMSツール</span><span class="en">EMS Tools</span></a></li>
-									</ul>
+								<li>
+									<a href="sls.html"><span class="ja">SLS (ソフトウェア)</span><span class="en">SLS (Software)</span></a>
 								</li>
 							</ul>
 						</li>
