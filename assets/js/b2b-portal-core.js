@@ -66,22 +66,28 @@ window.setLanguage = (lang) => {
 		html.classList.remove('lang-en');
 	}
 
-	const btnJa = document.getElementById('btn-ja');
-	const btnEn = document.getElementById('btn-en');
+	const btnsJa = document.querySelectorAll('.btn-ja, #btn-ja');
+	const btnsEn = document.querySelectorAll('.btn-en, #btn-en');
 
-	if (btnEn && btnJa) {
+	btnsEn.forEach(btn => {
 		if (lang === 'en') {
-			btnEn.style.background = '#0fc5d3';
-			btnEn.style.color = '#fff';
-			btnJa.style.background = 'none';
-			btnJa.style.color = 'rgba(255,255,255,0.5)';
+			btn.style.background = '#0fc5d3';
+			btn.style.color = '#fff';
 		} else {
-			btnJa.style.background = '#0fc5d3';
-			btnJa.style.color = '#fff';
-			btnEn.style.background = 'none';
-			btnEn.style.color = 'rgba(255,255,255,0.5)';
+			btn.style.background = 'none';
+			btn.style.color = 'rgba(255,255,255,0.5)';
 		}
-	}
+	});
+
+	btnsJa.forEach(btn => {
+		if (lang === 'en') {
+			btn.style.background = 'none';
+			btn.style.color = 'rgba(255,255,255,0.5)';
+		} else {
+			btn.style.background = '#0fc5d3';
+			btn.style.color = '#fff';
+		}
+	});
 };
 
 // --- 2. INJECT GLOBAL STYLES ---
@@ -144,8 +150,8 @@ const B2B_HEADER_HTML = `
 								<li> <i class="icon-envelope-letter"></i> <span class="copy-tooltip" onclick="window.copyToClipboard('Contactus@smartlinkco.jp', this)">Contactus@smartlinkco.jp</span></li>
 								<li class="lang-switcher-container" style="margin-left: 20px; display: inline-block; vertical-align: middle;">
 									<div class="lang-switch-pill" style="display: flex; background: rgba(0,0,0,0.2); border-radius: 20px; padding: 2px; border: 1px solid rgba(255,255,255,0.1);">
-										<a href="javascript:void(0)" onclick="setLanguage('ja')" id="btn-ja" style="padding: 2px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; color: #fff; background: #0fc5d3; transition: all 0.3s ease;">JP</a>
-										<a href="javascript:void(0)" onclick="setLanguage('en')" id="btn-en" style="padding: 2px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; color: rgba(255,255,255,0.5); transition: all 0.3s ease;">EN</a>
+										<a href="javascript:void(0)" onclick="setLanguage('ja')" id="btn-ja" class="btn-ja" style="padding: 2px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; color: #fff; background: #0fc5d3; transition: all 0.3s ease;">JP</a>
+										<a href="javascript:void(0)" onclick="setLanguage('en')" id="btn-en" class="btn-en" style="padding: 2px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; color: rgba(255,255,255,0.5); transition: all 0.3s ease;">EN</a>
 									</div>
 								</li>
 							</ul>
@@ -294,6 +300,81 @@ const B2B_FOOTER_HTML = `
 		</div>
 `;
 
+const B2B_MOBILE_MENU_HTML = `
+	<div class="el-mobile_menu relative-position" id="dynamic_mobile_menu">
+		<div class="el-mobile_menu_button s2-open_mobile_menu">
+			<i class="fas fa-bars"></i>
+		</div>
+		<div class="el-mobile_menu_wrap">
+			<div class="mobile_menu_overlay s2-open_mobile_menu"></div>
+			<div class="el-mobile_menu_content">
+				<div class="el-mobile_menu_close s2-open_mobile_menu">
+					<i class="fas fa-arrow-circle-right"></i>
+				</div>
+				<div class="m-brand-logo text-center">
+					<a href="index.html" class="smart-link-logo-container">
+						<img src="assets/img/logo/smart-link-logo.png" alt="Smart Link">
+						<span class="company-name">Smart Link</span>
+					</a>
+				</div>
+				<nav class="el-mobile-main-navigation clearfix ul-li">
+					<ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
+						<li><a href="index.html"><span class="ja">ホーム</span><span class="en">Home</span></a></li>
+						<li><a href="about.html"><span class="ja">会社概要</span><span class="en">About Us</span></a></li>
+						<li class="dropdown">
+							<a href="#"><span class="ja">製品情報</span><span class="en">Products</span></a>
+							<ul class="dropdown-menu clearfix">
+								<li class="dropdown">
+									<a href="#"><span class="ja">LED照明</span><span class="en">LED Lighting</span></a>
+									<ul class="dropdown-menu clearfix">
+										<li><a href="titan-about.html"><span class="ja">Titan LED 概要</span><span class="en">Titan LED Overview</span></a></li>
+										<li><a href="titan-led.html"><span class="ja">クリーンルーム用 (Spectrum Select)</span><span class="en">Cleanroom Series</span></a></li>
+										<li><a href="commercial-led.html"><span class="ja">業務用LEDチューブ</span><span class="en">Commercial LED</span></a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#"><span class="ja">Blue Frontier 空調</span><span class="en">Blue Frontier AC</span></a>
+									<ul class="dropdown-menu clearfix">
+										<li><a href="blue-frontier-history.html"><span class="ja">Blue Frontier 概要</span><span class="en">Blue Frontier Overview</span></a></li>
+										<li><a href="regenerative-ac.html"><span class="ja">技術・製品詳細</span><span class="en">Technology Details</span></a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="sls.html"><span class="ja">SLS (ソフトウェア)</span><span class="en">SLS (Software)</span></a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="case-studies.html"><span class="ja">導入事例</span><span class="en">Case Studies</span></a></li>
+						<li class="dropdown">
+							<a href="#"><span class="ja">サポート</span><span class="en">Support</span></a>
+							<ul class="dropdown-menu clearfix">
+								<li><a href="logistics.html"><span class="ja">輸入・物流管理</span><span class="en">Logistics</span></a></li>
+								<li><a href="compliance.html"><span class="ja">コンプライアンス</span><span class="en">Compliance</span></a></li>
+								<li><a href="warranty.html"><span class="ja">製品保証</span><span class="en">Warranty</span></a></li>
+							</ul>
+						</li>
+						<li><a href="contact.html"><span class="ja">お問い合わせ</span><span class="en">Contact</span></a></li>
+					</ul>
+				</nav>
+				<div class="mobile-lang-switcher" style="padding: 20px 0; display: flex; justify-content: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 20px;">
+					<div class="lang-switch-pill" style="display: flex; background: rgba(255,255,255,0.05); border-radius: 20px; padding: 4px; border: 1px solid rgba(255,255,255,0.1);">
+						<a href="javascript:void(0)" onclick="setLanguage('ja')" class="btn-ja" style="padding: 8px 25px; font-size: 14px; font-weight: bold; border-radius: 18px; color: #fff; background: #0fc5d3; transition: all 0.3s ease;">日本語</a>
+						<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 8px 25px; font-size: 14px; font-weight: bold; border-radius: 18px; color: rgba(255,255,255,0.5); transition: all 0.3s ease;">English</a>
+					</div>
+				</div>
+				<div class="mobile-contact-info text-center ul-li-block">
+					<ul>
+						<li> <i class="icon-envelope-letter"></i> Contactus@smartlinkco.jp</li>
+					</ul>
+				</div>
+				<div class="mobile-consult-btn text-uppercase">
+					<a href="contact.html"><span class="ja">無償サンプル依頼</span><span class="en">Request Sample</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+`;
+
 document.addEventListener("DOMContentLoaded", function () {
 	// 1. Determine the stored language preference from COOKIES
 	const preferredLang = window.getLanguageCookie();
@@ -306,6 +387,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	if (headerEl) {
 		headerEl.innerHTML = B2B_HEADER_HTML;
+		// Remove any existing manual mobile menu to prevent duplicates
+		const existingMobileMenus = document.querySelectorAll('.el-mobile_menu');
+		existingMobileMenus.forEach(menu => menu.remove());
+		headerEl.insertAdjacentHTML('afterend', B2B_MOBILE_MENU_HTML);
 	}
 	if (footerEl) {
 		footerEl.innerHTML = B2B_FOOTER_HTML;
@@ -316,6 +401,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Re-run theme initializers if needed
 	if (typeof ELTRON !== 'undefined') {
+		// unbind existing events to prevent double binding
+		$('.s2-open_mobile_menu').off('click');
+		$('.el-mobile_menu li.dropdown .dropdown-btn').off('click');
+		
 		ELTRON.Basic.MobileMenu();
 	}
 });
