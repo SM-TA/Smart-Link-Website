@@ -88,22 +88,24 @@ langStyles.innerHTML = `
 	.lang-en .hide-en { display: none !important; }
 
 	/* Language Switcher Pill Styles */
+	/* Language Switcher Pill Styles */
 	.lang-switch-pill a {
 		background: transparent;
-		color: #333; /* Dark/Black for better visibility on light backgrounds */
+		color: #000; /* Black for high contrast on mobile/light backgrounds */
 	}
-	/* Default to JP active */
-	body:not(.lang-en) .lang-switch-pill .btn-ja {
-		background: #0fc5d3 !important;
-		color: #fff !important;
+	/* Return desktop (header_top) to original muted white on dark background */
+	.header_top .lang-switch-pill a {
+		color: rgba(255,255,255,0.5);
 	}
+	/* Active states */
+	body:not(.lang-en) .lang-switch-pill .btn-ja,
 	body.lang-en .lang-switch-pill .btn-en {
 		background: #0fc5d3 !important;
 		color: #fff !important;
 	}
-	/* Header Top (Desktop) specific muted color for inactive on dark background */
-	.header_top .lang-switch-pill a {
-		color: rgba(255,255,255,0.7);
+	.header_top body:not(.lang-en) .lang-switch-pill .btn-ja,
+	.header_top body.lang-en .lang-switch-pill .btn-en {
+		color: #fff !important;
 	}
 	.header_top body:not(.lang-en) .lang-switch-pill .btn-ja {
 		color: #fff !important;
