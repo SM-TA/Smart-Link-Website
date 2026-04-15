@@ -302,6 +302,12 @@ const B2B_FOOTER_HTML = `
 
 const B2B_MOBILE_MENU_HTML = `
 	<div class="el-mobile_menu relative-position" id="dynamic_mobile_menu">
+		<div class="mobile-top-lang-switch d-md-none" style="position: absolute; right: 70px; top: -54px; z-index: 5;">
+			<div class="lang-switch-pill" style="display: flex; background: rgba(0,0,0,0.05); border-radius: 20px; padding: 2px; border: 1px solid rgba(0,0,0,0.1);">
+				<a href="javascript:void(0)" onclick="setLanguage('ja')" class="btn-ja" style="padding: 3px 10px; font-size: 11px; font-weight: bold; border-radius: 18px; color: #fff; background: #0fc5d3; transition: all 0.3s ease;">JP</a>
+				<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 3px 10px; font-size: 11px; font-weight: bold; border-radius: 18px; color: #a4a4a4; transition: all 0.3s ease;">EN</a>
+			</div>
+		</div>
 		<div class="el-mobile_menu_button s2-open_mobile_menu">
 			<i class="fas fa-bars"></i>
 		</div>
@@ -316,6 +322,12 @@ const B2B_MOBILE_MENU_HTML = `
 						<img src="assets/img/logo/smart-link-logo.png" alt="Smart Link">
 						<span class="company-name">Smart Link</span>
 					</a>
+				</div>
+				<div class="mobile-lang-switcher" style="padding-bottom: 20px; display: flex; justify-content: center; border-bottom: 1px solid rgba(0,0,0,0.05); margin-bottom: 20px;">
+					<div class="lang-switch-pill" style="display: flex; background: rgba(0,0,0,0.05); border-radius: 20px; padding: 4px; border: 1px solid rgba(0,0,0,0.1);">
+						<a href="javascript:void(0)" onclick="setLanguage('ja')" class="btn-ja" style="padding: 8px 25px; font-size: 14px; font-weight: bold; border-radius: 18px; color: #fff; background: #0fc5d3; transition: all 0.3s ease;">日本語</a>
+						<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 8px 25px; font-size: 14px; font-weight: bold; border-radius: 18px; color: #a4a4a4; transition: all 0.3s ease;">English</a>
+					</div>
 				</div>
 				<nav class="el-mobile-main-navigation clearfix ul-li">
 					<ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
@@ -356,12 +368,6 @@ const B2B_MOBILE_MENU_HTML = `
 						<li><a href="contact.html"><span class="ja">お問い合わせ</span><span class="en">Contact</span></a></li>
 					</ul>
 				</nav>
-				<div class="mobile-lang-switcher" style="padding: 20px 0; display: flex; justify-content: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 20px;">
-					<div class="lang-switch-pill" style="display: flex; background: rgba(255,255,255,0.05); border-radius: 20px; padding: 4px; border: 1px solid rgba(255,255,255,0.1);">
-						<a href="javascript:void(0)" onclick="setLanguage('ja')" class="btn-ja" style="padding: 8px 25px; font-size: 14px; font-weight: bold; border-radius: 18px; color: #fff; background: #0fc5d3; transition: all 0.3s ease;">日本語</a>
-						<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 8px 25px; font-size: 14px; font-weight: bold; border-radius: 18px; color: rgba(255,255,255,0.5); transition: all 0.3s ease;">English</a>
-					</div>
-				</div>
 				<div class="mobile-contact-info text-center ul-li-block">
 					<ul>
 						<li> <i class="icon-envelope-letter"></i> Contactus@smartlinkco.jp</li>
