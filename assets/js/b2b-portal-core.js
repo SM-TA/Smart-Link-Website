@@ -90,26 +90,31 @@ langStyles.innerHTML = `
 	/* Language Switcher Pill Styles */
 	.lang-switch-pill a {
 		background: transparent;
-		color: #999;
+		color: #000 !important;
+		font-weight: 800 !important;
+		text-transform: uppercase;
+		opacity: 1 !important;
 	}
 	/* Default to JP active */
-	body:not(.lang-en) .lang-switch-pill .btn-ja {
-		background: #0fc5d3 !important;
-		color: #fff !important;
-	}
+	body:not(.lang-en) .lang-switch-pill .btn-ja,
 	body.lang-en .lang-switch-pill .btn-en {
-		background: #0fc5d3 !important;
-		color: #fff !important;
+		background: #14cedd !important;
+		color: #000 !important;
 	}
-	/* Header Top specific muted color for inactive */
+	/* Header Top specific overrides */
 	.header_top .lang-switch-pill a {
-		color: rgba(255,255,255,0.5);
+		color: #000 !important;
 	}
-	.header_top body:not(.lang-en) .lang-switch-pill .btn-ja {
-		color: #fff !important;
-	}
-	.header_top body.lang-en .lang-switch-pill .btn-en {
-		color: #fff !important;
+	
+	/* Mobile Top Bar lang switch position fix */
+	@media screen and (max-width: 991px) {
+		.mobile-top-lang-switch {
+			position: fixed !important;
+			top: 15px !important;
+			right: 70px !important;
+			z-index: 9999 !important;
+			display: block !important;
+		}
 	}
 
 	/* Copy to Clipboard Tooltip */
@@ -184,9 +189,9 @@ const B2B_HEADER_HTML = `
 						<span class="company-name">Smart Link</span>
 					</a>
 					<div class="mobile-top-lang-switch d-md-none" style="display: inline-block;">
-						<div class="lang-switch-pill" style="display: flex; background: rgba(0,0,0,0.05); border-radius: 20px; padding: 2px; border: 1px solid rgba(0,0,0,0.1);">
-							<a href="javascript:void(0)" onclick="setLanguage('ja')" class="btn-ja" style="padding: 3px 10px; font-size: 11px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">JP</a>
-							<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 3px 10px; font-size: 11px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">EN</a>
+						<div class="lang-switch-pill" style="display: flex; background: #fff; border-radius: 20px; padding: 2px; border: 1.5px solid #000;">
+							<a href="javascript:void(0)" onclick="setLanguage('ja')" class="btn-ja" style="padding: 4px 12px; font-size: 12px; font-weight: 900; border-radius: 18px; transition: all 0.3s ease;">JP</a>
+							<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 4px 12px; font-size: 12px; font-weight: 900; border-radius: 18px; transition: all 0.3s ease;">EN</a>
 						</div>
 					</div>
 					<div class="importer-badge d-none d-md-inline-block">
@@ -327,10 +332,10 @@ const B2B_MOBILE_MENU_HTML = `
 						<span class="company-name">Smart Link</span>
 					</a>
 				</div>
-				<div class="mobile-lang-switcher" style="padding-bottom: 20px; display: flex; justify-content: center; border-bottom: 1px solid rgba(0,0,0,0.05); margin-bottom: 20px;">
-					<div class="lang-switch-pill" style="display: flex; background: rgba(0,0,0,0.05); border-radius: 20px; padding: 4px; border: 1px solid rgba(0,0,0,0.1);">
-						<a href="javascript:void(0)" onclick="setLanguage('ja')" class="btn-ja" style="padding: 8px 25px; font-size: 14px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">日本語</a>
-						<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 8px 25px; font-size: 14px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">English</a>
+				<div class="mobile-lang-switcher" style="padding-bottom: 25px; display: flex; justify-content: center; border-bottom: 1px solid rgba(0,0,0,0.1); margin-bottom: 25px;">
+					<div class="lang-switch-pill" style="display: flex; background: #fff; border-radius: 25px; padding: 5px; border: 2px solid #000;">
+						<a href="javascript:void(0)" onclick="setLanguage('ja')" class="btn-ja" style="padding: 10px 30px; font-size: 15px; font-weight: 900; border-radius: 20px; transition: all 0.3s ease;">日本語</a>
+						<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 10px 30px; font-size: 15px; font-weight: 900; border-radius: 20px; transition: all 0.3s ease;">ENGLISH</a>
 					</div>
 				</div>
 				<nav class="el-mobile-main-navigation clearfix ul-li">
