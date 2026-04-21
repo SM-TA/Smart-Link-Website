@@ -192,8 +192,8 @@ const B2B_HEADER_HTML = `
 						</div>
 					</div>
 					<div class="importer-badge d-none d-md-inline-block">
-						<span class="ja">正規輸入販売元・日本国内PSE規格適合</span>
-						<span class="en">Strategic Partner & PSE Certified</span>
+						<span class="ja">正規輸入販売元・PSE適合ドライバー採用</span>
+						<span class="en">Strategic Partner & PSE Compliant</span>
 					</div>
 				</div>
 				<nav class="main_navigation desktop-menu ul-li">
