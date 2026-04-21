@@ -31,6 +31,27 @@
 		.slider-style-one .main-slider-img-text .slider-content-box {
 			padding: 100px 0 !important;
 		}
+
+		.comp-table thead th {
+			background: #003366;
+			color: #fff;
+			text-align: center;
+			vertical-align: middle;
+			border: none;
+			padding: 20px !important;
+		}
+
+		.comp-table td {
+			text-align: center;
+			vertical-align: middle;
+			padding: 15px !important;
+		}
+
+		.comp-highlight {
+			background: rgba(255, 191, 0, 0.1);
+			font-weight: bold;
+			color: #003366;
+		}
 	</style>
 </head>
 
@@ -461,79 +482,51 @@
 					</p>
 				</div>
 				<div class="table-responsive">
-					<table class="table table-bordered text-center"
-						style="background: #fff; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border: 1px solid #dee2e6;">
-						<thead style="background: #003366; color: #fff;">
+					<table class="table table-bordered comp-table" style="background: #fff; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+						<thead>
 							<tr>
-								<th style="padding: 20px; font-size: 16px; border-bottom: 0;">
-									<span class="ja">仕様項目</span><span class="en"><br>Specification</span>
-								</th>
-								<th
-									style="padding: 20px; font-size: 16px; background: #0fc5d3; color: #fff; border-bottom: 0;">
-									<span class="ja">Titan LED（当社の標準）</span><span class="en"><br>Titan LED</span>
-								</th>
-								<th style="padding: 20px; font-size: 16px; border-bottom: 0;">
-									<span class="ja">国内大手一般品</span><span class="en"><br>General Domestic</span>
-								</th>
-								<th style="padding: 20px; font-size: 16px; border-bottom: 0;">
-									<span class="ja">国内特殊品（高天井等）</span><span class="en"><br>Specialized Domestic</span>
-								</th>
+								<th width="20%"><span class="ja">項目</span><br><span class="en">Feature</span></th>
+								<th width="30%" style="background: #FFBF00; color: #333;">TITAN-T5<br>Spectrum Select</th>
+								<th width="25%">T-NET LEDUAL (YM)</th>
+								<th width="25%">PANASONIC LDL40TY</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td style="padding: 20px; font-weight: bold; text-align: left; vertical-align: middle;">
-									<span class="ja">THD（高調波ノイズ）</span><span class="en d-block"
-										style="font-weight: normal; font-size: 0.85em; color: #666;">Total Harmonic
-										Distortion</span>
-								</td>
-								<td
-									style="padding: 20px; font-weight: bold; color: #0fc5d3; font-size: 18px; vertical-align: middle;">
-									<span class="ja">10%未満（超低ノイズ）</span><span class="en d-none">&lt; 10% (Ultra-Low
-										Noise)</span>
-								</td>
-								<td style="padding: 20px; color: #666; vertical-align: middle;">~ 20%</td>
-								<td style="padding: 20px; color: #666; vertical-align: middle;">~ 15%</td>
+								<td><strong><span class="ja">遮断波長</span><br><span class="en">Cut-off</span></strong></td>
+								<td class="comp-highlight"> &lt; 470nm (<span class="ja">精密遮断</span><span class="en">Precision Cut</span>)</td>
+								<td> &lt; 500nm</td>
+								<td> &lt; 500nm</td>
 							</tr>
 							<tr>
-								<td style="padding: 20px; font-weight: bold; text-align: left; vertical-align: middle;">
-									<span class="ja">設計稼働寿命</span><span class="en d-block"
-										style="font-weight: normal; font-size: 0.85em; color: #666;">Rated
-										Lifespan</span>
-								</td>
-								<td
-									style="padding: 20px; font-weight: bold; color: #0fc5d3; font-size: 18px; vertical-align: middle;">
-									<span class="ja">155,000時間（約17年）</span><span class="en d-none">155,000 Hours (17
-										Years)</span>
-								</td>
-								<td style="padding: 20px; color: #666; vertical-align: middle;">
-									<span class="ja">40,000時間</span><span class="en d-none">40,000 Hours</span>
-								</td>
-								<td style="padding: 20px; color: #666; vertical-align: middle;">
-									<span class="ja">50,000時間</span><span class="en d-none">50,000 Hours</span>
-								</td>
+								<td><strong><span class="ja">定格寿命</span><br><span class="en">Rated Life</span></strong></td>
+								<td class="comp-highlight">155,000 <span class="ja">時間</span><br><span class="en">Hours</span></td>
+								<td>40,000 <span class="ja">時間</span><br><span class="en">Hours</span></td>
+								<td>40,000 <span class="ja">時間</span><br><span class="en">Hours</span></td>
 							</tr>
 							<tr>
-								<td style="padding: 20px; font-weight: bold; text-align: left; vertical-align: middle;">
-									<span class="ja">熱管理・電源設計</span><span class="en d-block"
-										style="font-weight: normal; font-size: 0.85em; color: #666;">Heat
-										Management</span>
-								</td>
-								<td
-									style="padding: 20px; font-weight: bold; color: #0fc5d3; font-size: 18px; vertical-align: middle;">
-									<span class="ja">外部ドライバー（完全熱源分離）</span><span class="en d-none">External
-										Driver</span>
-								</td>
-								<td style="padding: 20px; color: #666; vertical-align: middle;">
-									<span class="ja">内部ドライバー（熱劣化要因）</span><span class="en d-none">Internal Driver</span>
-								</td>
-								<td style="padding: 20px; color: #666; vertical-align: middle;">
-									<span class="ja">内部ドライバー</span><span class="en d-none">Internal Driver</span>
-								</td>
+								<td><strong><span class="ja">エネルギー効率</span><br><span class="en">Efficiency</span></strong></td>
+								<td class="comp-highlight">105 Lm/W (1870lm)</td>
+								<td>77 Lm/W (1400lm)</td>
+								<td>124 Lm/W (2100lm)*</td>
+							</tr>
+							<tr>
+								<td><strong><span class="ja">歪率 (THD)</span><br><span class="en">Distortion (THD)</span></strong></td>
+								<td class="comp-highlight">&lt; 10% (<span class="ja">精密機器対応</span><br><span class="en">Ultra-Low Noise</span>)</td>
+								<td>~ 20%</td>
+								<td>~ 20%</td>
+							</tr>
+							<tr>
+								<td><strong><span class="ja">給電方式</span><br><span class="en">Power Design</span></strong></td>
+								<td class="comp-highlight"><span class="ja">外部電源 (熱源分離型)</span><br><span class="en">External (Remote) Driver</span></td>
+								<td>AC直結 (寿命低下リスク)</td>
+								<td>片側給電</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
+				<p style="font-size: 13px; color: #777; font-style: italic; margin-top: 15px; text-align: left;">
+					*パナソニックは数値上の効率は高いが、Titanの方が視覚的に明るく・高精度なUV遮断を提供します。</p>
 			</div>
 
 			<!-- D. The "Direct Supply Chain" Visual & CTA -->
