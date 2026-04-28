@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
+<script>function initApollo() {
+		var n = Math.random().toString(36).substring(7), o = document.createElement("script");
+		o.src = "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=" + n, o.async = !0, o.defer = !0,
+			o.onload = function () { window.trackingFunctions.onLoad({ appId: "6646469e6f7aca0600d1bb2e" }) },
+			document.head.appendChild(o)
+	} initApollo();</script>
 
 <head>
 	<meta charset="UTF-8">
@@ -29,8 +35,13 @@
 			z-index: 0;
 		}
 
-		html.lang-en .sls-hero-bg { background-image: url('assets/img/Titan/sls-hero-bg-en.png'); }
-		html:not(.lang-en) .sls-hero-bg { background-image: url('assets/img/Titan/sls-hero-bg-ja.png'); }
+		html.lang-en .sls-hero-bg {
+			background-image: url('assets/img/Titan/sls-hero-bg-en.png');
+		}
+
+		html:not(.lang-en) .sls-hero-bg {
+			background-image: url('assets/img/Titan/sls-hero-bg-ja.png');
+		}
 
 		.sls-tag {
 			background: #FFBF00;
@@ -80,7 +91,9 @@
 
 	<section class="sls-hero">
 		<div class="sls-hero-bg"></div>
-		<div class="background_overlay" style="background: rgba(0,25,51,0.85); position: absolute; top:0; left:0; width: 100%; height:100%; z-index: 1;"></div>
+		<div class="background_overlay"
+			style="background: rgba(0,25,51,0.85); position: absolute; top:0; left:0; width: 100%; height:100%; z-index: 1;">
+		</div>
 		<div class="container position-relative" style="z-index: 2;">
 			<div class="text-center">
 				<span class="sls-tag">
@@ -92,9 +105,11 @@
 					<span class="ja">SLS (Smart Link System)</span>
 					<span class="en">SLS (Smart Link System)</span>
 				</h2>
-				<p style="color: #0fc5d3; font-size: 20px; font-weight: bold; margin-top: 15px; max-width: 800px; margin-left: auto; margin-right: auto;">
+				<p
+					style="color: #0fc5d3; font-size: 20px; font-weight: bold; margin-top: 15px; max-width: 800px; margin-left: auto; margin-right: auto;">
 					<span class="ja">JEPX直接連携によるエネルギー調達の最適化。コスト削減と電力系統の安定化を同時に実現。</span>
-					<span class="en">Optimizing energy procurement via direct JEPX integration. Realizing cost savings and grid stability simultaneously.</span>
+					<span class="en">Optimizing energy procurement via direct JEPX integration. Realizing cost savings
+						and grid stability simultaneously.</span>
 				</p>
 			</div>
 		</div>
@@ -110,20 +125,29 @@
 							<span class="en">Energy Mediation: An Innovative Procurement Platform</span>
 						</h3>
 						<p style="color: #555; font-size: 17px; line-height: 1.8;">
-							<span class="ja">スマートリンクシステム（SLS）は、エネルギー調達を簡素化し最適化するために設計された、当社の革新的かつ特注のソフトウェアプラットフォームです。日本の電力取引所（JEPX）との直接API統合を活用することで、SLSはリアルタイムの価格と契約データへのシームレスなアクセスを提供します。</span>
-							<span class="en">The Smart Link System (SLS) is our innovative, proprietary software platform designed to simplify and optimize energy procurement. Leveraging direct API integration with the Japan Electric Power Exchange (JEPX), SLS provides seamless access to real-time pricing and contract data.</span>
+							<span
+								class="ja">スマートリンクシステム（SLS）は、エネルギー調達を簡素化し最適化するために設計された、当社の革新的かつ特注のソフトウェアプラットフォームです。日本の電力取引所（JEPX）との直接API統合を活用することで、SLSはリアルタイムの価格と契約データへのシームレスなアクセスを提供します。</span>
+							<span class="en">The Smart Link System (SLS) is our innovative, proprietary software
+								platform designed to simplify and optimize energy procurement. Leveraging direct API
+								integration with the Japan Electric Power Exchange (JEPX), SLS provides seamless access
+								to real-time pricing and contract data.</span>
 						</p>
 						<div class="sls-vision-box">
 							<p style="color: #003366; font-size: 18px; font-weight: bold; margin-bottom: 0;">
-								<span class="ja">この技術により、産業施設から政府機関まで、さまざまな顧客のニーズと、コスト削減・信頼性の最適な組み合わせを提供するエネルギー契約の正確なマッチングが可能になります。</span>
-								<span class="en">This technology enables precise matching between the needs of diverse customers—from industrial facilities to government agencies—and energy contracts that offer the optimal combination of cost savings and reliability.</span>
+								<span
+									class="ja">この技術により、産業施設から政府機関まで、さまざまな顧客のニーズと、コスト削減・信頼性の最適な組み合わせを提供するエネルギー契約の正確なマッチングが可能になります。</span>
+								<span class="en">This technology enables precise matching between the needs of diverse
+									customers—from industrial facilities to government agencies—and energy contracts
+									that offer the optimal combination of cost savings and reliability.</span>
 							</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<img src="assets/img/Titan/sls-data-analysis-ja.png" alt="Energy Data Analysis" class="ja" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-					<img src="assets/img/Titan/sls-data-analysis-en.png" alt="Energy Data Analysis" class="en" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+					<img src="assets/img/Titan/sls-data-analysis-ja.png" alt="Energy Data Analysis" class="ja"
+						style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+					<img src="assets/img/Titan/sls-data-analysis-en.png" alt="Energy Data Analysis" class="en"
+						style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
 				</div>
 			</div>
 
@@ -136,10 +160,12 @@
 				</div>
 
 				<div class="col-lg-12 mb-5">
-					<img src="assets/img/Titan/sls-auto-dashboard-ja.png" alt="SLS Dashboard" class="ja" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-					<img src="assets/img/Titan/sls-auto-dashboard-en.png" alt="SLS Dashboard" class="en" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+					<img src="assets/img/Titan/sls-auto-dashboard-ja.png" alt="SLS Dashboard" class="ja"
+						style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+					<img src="assets/img/Titan/sls-auto-dashboard-en.png" alt="SLS Dashboard" class="en"
+						style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
 				</div>
-				
+
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="feature-card">
 						<div class="feature-icon"><i class="fas fa-network-wired"></i></div>
@@ -149,7 +175,8 @@
 						</h4>
 						<p style="color: #666; font-size: 15px; line-height: 1.7;">
 							<span class="ja">JEPXに直接接続し、最新のエネルギー価格と契約内容をリアルタイムで確認。市場の変動に合わせた最適な契約を迅速に特定します。</span>
-							<span class="en">Direct connection to JEPX for real-time energy pricing and contract details, enabling rapid identification of optimal contracts amid market shifts.</span>
+							<span class="en">Direct connection to JEPX for real-time energy pricing and contract
+								details, enabling rapid identification of optimal contracts amid market shifts.</span>
 						</p>
 					</div>
 				</div>
@@ -163,7 +190,8 @@
 						</h4>
 						<p style="color: #666; font-size: 15px; line-height: 1.7;">
 							<span class="ja">複雑なエネルギー調達業務を自動化し、合理的かつ効率的なユーザー体験を保証。煩雑なデータ入力を最小限に抑えます。</span>
-							<span class="en">Automates complex energy procurement tasks, ensuring a streamlined user experience while minimizing tedious manual data entry.</span>
+							<span class="en">Automates complex energy procurement tasks, ensuring a streamlined user
+								experience while minimizing tedious manual data entry.</span>
 						</p>
 					</div>
 				</div>
@@ -177,7 +205,8 @@
 						</h4>
 						<p style="color: #666; font-size: 15px; line-height: 1.7;">
 							<span class="ja">国内のソフトウェアエンジニアによる継続的なカスタマイズと保守。日本市場特有のニーズに合わせた敏捷な対応を約束します。</span>
-							<span class="en">Ongoing customization and maintenance provided by domestic software engineers, ensuring agility for localized market requirements.</span>
+							<span class="en">Ongoing customization and maintenance provided by domestic software
+								engineers, ensuring agility for localized market requirements.</span>
 						</p>
 					</div>
 				</div>
@@ -196,29 +225,35 @@
 						</h2>
 					</div>
 					<div class="mb-5">
-						<h4 style="color: #003366; font-weight: bold;"><i class="fas fa-cubes" style="color: #FFBF00; margin-right: 10px;"></i>
+						<h4 style="color: #003366; font-weight: bold;"><i class="fas fa-cubes"
+								style="color: #FFBF00; margin-right: 10px;"></i>
 							<span class="ja">モジュール式アーキテクチャ</span>
 							<span class="en">Modular Architecture</span>
 						</h4>
 						<p style="color: #555; margin-top: 10px; font-size: 15px; line-height: 1.7;">
 							<span class="ja">進化する市場や顧客の需要に合わせて、新しい機能やサービスをシームレスに追加。柔軟な拡張性を保証します。</span>
-							<span class="en">Seamlessly add new features and services to adapt to evolving market and customer demands with flexible scalability.</span>
+							<span class="en">Seamlessly add new features and services to adapt to evolving market and
+								customer demands with flexible scalability.</span>
 						</p>
 					</div>
 					<div class="mb-4">
-						<h4 style="color: #003366; font-weight: bold;"><i class="fas fa-robot" style="color: #0fc5d3; margin-right: 10px;"></i>
+						<h4 style="color: #003366; font-weight: bold;"><i class="fas fa-robot"
+								style="color: #0fc5d3; margin-right: 10px;"></i>
 							<span class="ja">高度な AI の統合（開発中）</span>
 							<span class="en">Advanced AI Integration (In Dev)</span>
 						</h4>
 						<p style="color: #555; margin-top: 10px; font-size: 15px; line-height: 1.7;">
 							<span class="ja">開発中のAI搭載モジュールにより、予測的洞察とエネルギー効率戦略の高度化を図り、より賢明な意思決定を支援します。</span>
-							<span class="en">In-development AI modules will provide predictive insights and advanced efficiency strategies to support smarter decision-making.</span>
+							<span class="en">In-development AI modules will provide predictive insights and advanced
+								efficiency strategies to support smarter decision-making.</span>
 						</p>
 					</div>
 				</div>
 				<div class="col-lg-6 mb-4">
-					<img src="assets/img/Titan/sls-ai-module-ja.png" alt="AI Module" class="ja" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-					<img src="assets/img/Titan/sls-ai-module-en.png" alt="AI Module" class="en" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+					<img src="assets/img/Titan/sls-ai-module-ja.png" alt="AI Module" class="ja"
+						style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+					<img src="assets/img/Titan/sls-ai-module-en.png" alt="AI Module" class="en"
+						style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
 				</div>
 			</div>
 		</div>
@@ -233,17 +268,20 @@
 			<div class="row">
 				<hr style="border-color: rgba(255,255,255,0.1); width: 100%;">
 				<div class="col-md-4 py-4">
-					<h5 style="color: #0fc5d3; font-weight: bold; margin-bottom: 15px;"><span class="ja">コスト削減</span><span class="en">Cost Reduction</span></h5>
+					<h5 style="color: #0fc5d3; font-weight: bold; margin-bottom: 15px;"><span
+							class="ja">コスト削減</span><span class="en">Cost Reduction</span></h5>
 					<p class="ja">正確なマッチングと最適化ツールによる大幅な節約。</p>
 					<p class="en">Significant savings through precise matching and optimization tools.</p>
 				</div>
 				<div class="col-md-4 py-4">
-					<h5 style="color: #0fc5d3; font-weight: bold; margin-bottom: 15px;"><span class="ja">エネルギー安全保障</span><span class="en">Energy Security</span></h5>
+					<h5 style="color: #0fc5d3; font-weight: bold; margin-bottom: 15px;"><span
+							class="ja">エネルギー安全保障</span><span class="en">Energy Security</span></h5>
 					<p class="ja">信頼性の高い契約により安定したエネルギー供給を確保。</p>
 					<p class="en">Secure a stable energy supply through reliable energy contracts.</p>
 				</div>
 				<div class="col-md-4 py-4">
-					<h5 style="color: #0fc5d3; font-weight: bold; margin-bottom: 15px;"><span class="ja">サステナビリティ</span><span class="en">Sustainability</span></h5>
+					<h5 style="color: #0fc5d3; font-weight: bold; margin-bottom: 15px;"><span
+							class="ja">サステナビリティ</span><span class="en">Sustainability</span></h5>
 					<p class="ja">二酸化炭素削減目標達成を支援するオーダーメイド解。</p>
 					<p class="en">Tailored solutions to help achieve carbon reduction goals.</p>
 				</div>
