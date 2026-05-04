@@ -191,10 +191,6 @@ const B2B_HEADER_HTML = `
 							<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 3px 10px; font-size: 11px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">EN</a>
 						</div>
 					</div>
-					<div class="importer-badge d-none d-md-inline-block">
-						<span class="ja">正規輸入販売元・PSE適合ドライバー採用</span>
-						<span class="en">Strategic Partner & PSE Compliant</span>
-					</div>
 				</div>
 				<nav class="main_navigation desktop-menu ul-li">
 					<ul id="main-nav" class="navbar-nav text-uppercase clearfix">
