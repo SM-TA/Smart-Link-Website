@@ -147,16 +147,53 @@ langStyles.innerHTML = `
 document.head.appendChild(langStyles);
 
 const B2B_HEADER_HTML = `
+		<div class="header_top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="header_top_contact ul-li clearfix">
+							<ul>
+								<li> <i class="icon-envelope-letter"></i> <span class="copy-tooltip" onclick="window.copyToClipboard('Contactus@smartlinkco.jp', this)">Contactus@smartlinkco.jp</span></li>
+								<li class="lang-switcher-container" style="margin-left: 20px; display: inline-block; vertical-align: middle;">
+									<div class="lang-switch-pill" style="display: flex; background: rgba(0,0,0,0.2); border-radius: 20px; padding: 2px; border: 1px solid rgba(255,255,255,0.1);">
+										<a href="javascript:void(0)" onclick="setLanguage('ja')" id="btn-ja" class="btn-ja" style="padding: 2px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; transition: all 0.3s ease;">JP</a>
+										<a href="javascript:void(0)" onclick="setLanguage('en')" id="btn-en" class="btn-en" style="padding: 2px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; transition: all 0.3s ease;">EN</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="header_top_info float-right">
+							<div class="top_info_item top_info_menu ul-li clearfix">
+								<ul>
+									<li><a href="https://www.linkedin.com/company/smart-link-jp" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
+									<li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+									<li><a href="about.html"><span class="ja">企業情報</span><span class="en">Corporate Info</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="site-main-menu clearfix">
-			<div class="container" style="display: flex; align-items: center; justify-content: space-between;">
-				<div class="brand-logo" style="display: flex; align-items: center;">
+			<div class="container">
+				<div class="brand-logo float-left" style="display: flex; align-items: center;">
 					<a href="index.html" class="smart-link-logo-container" style="margin-right: 15px;">
 						<img src="assets/img/logo/smart-link-logo.png" alt="Smart Link">
 						<span class="company-name">Smart Link</span>
 					</a>
+					<div class="mobile-top-lang-switch d-md-none" style="display: inline-block;">
+						<div class="lang-switch-pill" style="display: flex; background: rgba(0,0,0,0.05); border-radius: 20px; padding: 2px; border: 1px solid rgba(0,0,0,0.1);">
+							<a href="javascript:void(0)" onclick="setLanguage('ja')" class="btn-ja" style="padding: 3px 10px; font-size: 11px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">JP</a>
+							<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 3px 10px; font-size: 11px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">EN</a>
+						</div>
+					</div>
 				</div>
 				<nav class="main_navigation desktop-menu ul-li">
-					<ul id="main-nav" class="navbar-nav text-uppercase clearfix" style="margin: 0;">
+					<ul id="main-nav" class="navbar-nav text-uppercase clearfix">
 						<li><a href="index.html"><span class="ja">ホーム</span><span class="en">Home</span></a></li>
 						<li><a href="about.html"><span class="ja">会社概要</span><span class="en">About Us</span></a></li>
 						<li class="dropdown">
@@ -194,21 +231,9 @@ const B2B_HEADER_HTML = `
 						<li><a href="contact.html"><span class="ja">お問い合わせ</span><span class="en">Contact</span></a></li>
 					</ul>
 				</nav>
-				<div class="header-right-actions" style="display: flex; align-items: center; gap: 15px;">
-					<!-- Desktop Lang Switcher -->
-					<div class="lang-switch-pill d-none d-md-flex" style="background: rgba(0,0,0,0.05); border-radius: 20px; padding: 2px; border: 1px solid rgba(0,0,0,0.1);">
-						<a href="javascript:void(0)" onclick="setLanguage('ja')" class="btn-ja" style="padding: 4px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; transition: all 0.3s ease;">JP</a>
-						<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 4px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; transition: all 0.3s ease;">EN</a>
-					</div>
-					<!-- Mobile Lang Switcher -->
-					<div class="mobile-top-lang-switch d-md-none">
-						<div class="lang-switch-pill" style="display: flex; background: rgba(0,0,0,0.05); border-radius: 20px; padding: 2px; border: 1px solid rgba(0,0,0,0.1);">
-							<a href="javascript:void(0)" onclick="setLanguage('ja')" class="btn-ja" style="padding: 3px 10px; font-size: 11px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">JP</a>
-							<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 3px 10px; font-size: 11px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">EN</a>
-						</div>
-					</div>
-					<div class="con-btn titan-cta text-center text-uppercase d-none d-lg-block">
-						<a href="contact.html" style="padding: 10px 20px;"><span class="ja">無償サンプル依頼</span><span class="en">Request Sample</span> <i class="flaticon-next"></i></a>
+				<div class="site-search-btn float-right" style="margin-top: 10px;">
+					<div class="con-btn titan-cta text-center text-uppercase">
+						<a href="contact.html"><span class="ja">無償サンプル依頼</span><span class="en">Request Sample</span> <i class="flaticon-next"></i></a>
 					</div>
 				</div>
 			</div>
