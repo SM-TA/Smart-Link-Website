@@ -182,7 +182,7 @@ const B2B_HEADER_HTML = `
 			<div class="container">
 				<div class="brand-logo float-left" style="display: flex; align-items: center;">
 					<a href="index.html" class="smart-link-logo-container" style="margin-right: 15px;">
-						<img src="assets/img/logo/smart-link-logo.png" alt="Smart Link">
+						<img src="assets/img/logo/smart-link-logo-120.png" width="121" height="120" alt="Smart Link">
 						<span class="company-name">Smart Link</span>
 					</a>
 					<div class="mobile-top-lang-switch d-md-none" style="display: inline-block;">
@@ -241,7 +241,7 @@ const B2B_FOOTER_HTML = `
 							<div class="footer-widget-item pera-content">
 								<div class="footer-logo" style="margin-bottom: 25px;">
 									<a href="index.html" class="smart-link-logo-container">
-										<img src="assets/img/logo/smart-link-logo.png" alt="Smart Link" style="height: 40px; margin-right: 15px;">
+										<img src="assets/img/logo/smart-link-logo-120.png" width="121" height="120" alt="Smart Link" style="height: 40px; width: auto; margin-right: 15px;">
 										<span class="company-name" style="color: #fff; font-size: 24px; font-weight: 800;">Smart Link</span>
 									</a>
 								</div>
@@ -311,7 +311,7 @@ const B2B_MOBILE_MENU_HTML = `
 				</div>
 				<div class="m-brand-logo text-center">
 					<a href="index.html" class="smart-link-logo-container">
-						<img src="assets/img/logo/smart-link-logo.png" alt="Smart Link">
+						<img src="assets/img/logo/smart-link-logo-120.png" width="121" height="120" alt="Smart Link">
 						<span class="company-name">Smart Link</span>
 					</a>
 				</div>

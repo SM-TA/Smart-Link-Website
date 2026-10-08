@@ -3540,3 +3540,5 @@ select:visited {
 .footer-logo .company-name {
     font-size: 20px;
 }
+/* Smart Link: keep aspect ratio for images with explicit width/height (zero specificity) */
+:where(img[width][height]) { height: auto; max-width: 100%; }
