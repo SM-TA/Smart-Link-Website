@@ -153,7 +153,7 @@ const B2B_HEADER_HTML = `
 					<div class="col-md-6">
 						<div class="header_top_contact ul-li clearfix">
 							<ul>
-								<li> <i class="icon-envelope-letter"></i> <span class="copy-tooltip" onclick="window.copyToClipboard('Contactus@smartlinkco.jp', this)">Contactus@smartlinkco.jp</span></li>
+								<li> <i class="far fa-envelope"></i> <span class="copy-tooltip" onclick="window.copyToClipboard('Contactus@smartlinkco.jp', this)">Contactus@smartlinkco.jp</span></li>
 								<li class="lang-switcher-container" style="margin-left: 20px; display: inline-block; vertical-align: middle;">
 									<div class="lang-switch-pill" style="display: flex; background: rgba(0,0,0,0.2); border-radius: 20px; padding: 2px; border: 1px solid rgba(255,255,255,0.1);">
 										<a href="javascript:void(0)" onclick="setLanguage('ja')" id="btn-ja" class="btn-ja" style="padding: 2px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; transition: all 0.3s ease;">JP</a>
@@ -206,9 +206,6 @@ const B2B_HEADER_HTML = `
 										<li><a href="titan-led.html"><span class="ja">クリーンルーム用 (Spectrum Select)</span><span class="en">Cleanroom Series</span></a></li>
 									</ul>
 								</li>
-								<li>
-									<a href="sls.html"><span class="ja">SLS (ソフトウェア)</span><span class="en">SLS (Software)</span></a>
-								</li>
 							</ul>
 						</li>
 						<li><a href="case-studies.html"><span class="ja">導入事例</span><span class="en">Case Studies</span></a></li>
@@ -225,7 +222,7 @@ const B2B_HEADER_HTML = `
 				</nav>
 				<div class="site-search-btn float-right" style="margin-top: 10px;">
 					<div class="con-btn titan-cta text-center text-uppercase">
-						<a href="contact.html"><span class="ja">無償サンプル依頼</span><span class="en">Request Sample</span> <i class="flaticon-next"></i></a>
+						<a href="contact.html"><span class="ja">無償サンプル依頼</span><span class="en">Request Sample</span> <i class="fas fa-arrow-right"></i></a>
 					</div>
 				</div>
 			</div>
@@ -257,7 +254,7 @@ const B2B_FOOTER_HTML = `
 										Chuo-ku, Fukuoka City, Fukuoka 810-0041
 									</p>
 									<p style="margin-top: 15px;">
-										<i class="icon-envelope-letter" style="color: #0fc5d3; margin-right: 10px;"></i>
+										<i class="far fa-envelope" style="color: #0fc5d3; margin-right: 10px;"></i>
 										<span class="copy-tooltip" onclick="window.copyToClipboard('Contactus@smartlinkco.jp', this)">Contactus@smartlinkco.jp</span>
 									</p>
 								</div>
@@ -268,7 +265,6 @@ const B2B_FOOTER_HTML = `
 								<h3 class="el-widget-title" style="color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 25px; border-left: 3px solid #0fc5d3; padding-left: 15px;"><span class="ja">ソリューション</span><span class="en">Solutions</span></h3>
 								<ul class="list-style-none footer-links" style="line-height: 2.5; font-size: 14px;">
 									<li><a href="titan-led.html" style="color: #bbb;"><span class="ja">クリーンルーム照明</span><span class="en">Cleanroom Lighting</span></a></li>
-									<li><a href="sls.html" style="color: #bbb;"><span class="ja">エネルギー管理ソフト</span><span class="en">Energy Software</span></a></li>
 								</ul>
 							</div>
 						</div>
@@ -335,9 +331,6 @@ const B2B_MOBILE_MENU_HTML = `
 										<li><a href="titan-led.html"><span class="ja">クリーンルーム用 (Spectrum Select)</span><span class="en">Cleanroom Series</span></a></li>
 									</ul>
 								</li>
-								<li>
-									<a href="sls.html"><span class="ja">SLS (ソフトウェア)</span><span class="en">SLS (Software)</span></a>
-								</li>
 							</ul>
 						</li>
 						<li><a href="case-studies.html"><span class="ja">導入事例</span><span class="en">Case Studies</span></a></li>
@@ -354,7 +347,7 @@ const B2B_MOBILE_MENU_HTML = `
 				</nav>
 				<div class="mobile-contact-info text-center ul-li-block">
 					<ul>
-						<li> <i class="icon-envelope-letter"></i> Contactus@smartlinkco.jp</li>
+						<li> <i class="far fa-envelope"></i> Contactus@smartlinkco.jp</li>
 					</ul>
 				</div>
 				<div class="mobile-consult-btn text-uppercase">

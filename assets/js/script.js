@@ -17,22 +17,10 @@ Last change:    00/00/00
 
 		Basic: {
 			init: function() {
-
-				this.preloader();
-				this.BackgroundImage();
-				this.StickyMenu();
-				this.MobileMenu();
-				this.MianSlider();
-				this.videoBox();
-				this.bannerParalax();
-				this.ProjectFilter();
-				this.Animation();
-				this.SerachForm();
-				this.TestimonialSlider();
-				this.counterUp();
-				this.FeatureItemSlider();
-				this.partnerItemSlider();
-				this.scrollTop();
+				var self = this;
+				['preloader','BackgroundImage','StickyMenu','MobileMenu','MianSlider','videoBox','bannerParalax','ProjectFilter','Animation','SerachForm','TestimonialSlider','counterUp','FeatureItemSlider','partnerItemSlider','scrollTop'].forEach(function (fn) {
+					try { self[fn](); } catch (e) { /* plugin not loaded on this page */ }
+				});
 			},
 			preloader: function (){
 				jQuery(window).on('load', function(){
@@ -68,17 +56,18 @@ Last change:    00/00/00
 				}
 			},
 			MianSlider: function (){
+				var multi = jQuery('#slider-main').children().length > 1;
 				jQuery('#slider-main').owlCarousel({
 					items: 1,
-					loop: true,
-					nav: true,
+					loop: multi,
+					nav: multi,
 					dots: false,
-					autoplay: true,
+					autoplay: multi,
 					navSpeed: 1000,
 					smartSpeed: 2000,
 					animateOut: 'fadeOut',
 					animateIn: 'fadeIn',
-					navText:["<i class='icon-arrow-left'></i>","<i class='icon-arrow-right'></i>"],
+					navText:["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
 					mouseDrag: false,
 					touchDrag: false,
 				});
