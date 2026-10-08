@@ -865,7 +865,7 @@ select:visited {
   .slider-style-one .main-slider-img-text .slider-content-box {
     max-width: 620px;
     padding: 180px 0px 210px 0px; }
-    .slider-style-one .main-slider-img-text .slider-content-box span, .slider-style-one .main-slider-img-text .slider-content-box h1, .slider-style-one .main-slider-img-text .slider-content-box p {
+    .slider-style-one .main-slider-img-text .slider-content-box span, .slider-style-one .main-slider-img-text .slider-content-box h1, .slider-style-one .main-slider-img-text .slider-content-box h2.h1-style, .slider-style-one .main-slider-img-text .slider-content-box p {
       color: #fff; }
     .slider-style-one .main-slider-img-text .slider-content-box span {
       opacity: 0;
@@ -875,7 +875,7 @@ select:visited {
       transform: translatex(50px); }
       .slider-style-one .main-slider-img-text .slider-content-box span img {
         margin-right: 10px; }
-    .slider-style-one .main-slider-img-text .slider-content-box h1 {
+    .slider-style-one .main-slider-img-text .slider-content-box h1, .slider-style-one .main-slider-img-text .slider-content-box h2.h1-style {
       font-size: 60px;
       font-weight: 700;
       padding: 5px 0px 15px;
@@ -3167,7 +3167,7 @@ select:visited {
     text-align: center;
     max-width: 500px;
     margin: 0 auto; }
-  .slider-style-one .main-slider-img-text .slider-content-box h1 {
+  .slider-style-one .main-slider-img-text .slider-content-box h1, .slider-style-one .main-slider-img-text .slider-content-box h2.h1-style {
     font-size: 48px; }
   #slider-smartlink .owl-prev,
   #slider-smartlink .owl-next {
@@ -3266,7 +3266,7 @@ select:visited {
     margin-bottom: 40px; } }
 
 @media screen and (max-width: 680px) {
-  .slider-style-one .main-slider-img-text .slider-content-box h1 {
+  .slider-style-one .main-slider-img-text .slider-content-box h1, .slider-style-one .main-slider-img-text .slider-content-box h2.h1-style {
     font-size: 36px; }
   .slider-style-one .main-slider-img-text .slider-content-box .slide-btn-1 a:nth-child(1),
   .slider-style-one .slide-type-two .slider-content-box .slide-btn-1 a:nth-child(2) {
@@ -3438,7 +3438,7 @@ select:visited {
     font-size: 20px; } }
 
 @media screen and (max-width: 380px) {
-  .slider-style-one .main-slider-img-text .slider-content-box h1 {
+  .slider-style-one .main-slider-img-text .slider-content-box h1, .slider-style-one .main-slider-img-text .slider-content-box h2.h1-style {
     font-size: 30px; }
   .slider-style-one .main-slider-img-text .slider-content-box .slide-btn-1 a:nth-child(2) {
     display: block;

@@ -268,7 +268,7 @@ const B2B_FOOTER_HTML = `
 								<h3 class="el-widget-title" style="color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 25px; border-left: 3px solid #0fc5d3; padding-left: 15px;"><span class="ja">ソリューション</span><span class="en">Solutions</span></h3>
 								<ul class="list-style-none footer-links" style="line-height: 2.5; font-size: 14px;">
 									<li><a href="titan-led.html" style="color: #bbb;"><span class="ja">クリーンルーム照明</span><span class="en">Cleanroom Lighting</span></a></li>
-									<li><a href="software.html" style="color: #bbb;"><span class="ja">エネルギー管理ソフト</span><span class="en">Energy Software</span></a></li>
+									<li><a href="sls.html" style="color: #bbb;"><span class="ja">エネルギー管理ソフト</span><span class="en">Energy Software</span></a></li>
 								</ul>
 							</div>
 						</div>
