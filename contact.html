@@ -65,59 +65,70 @@
 					</p>
 				</div>
 
-				<form action="#" method="post">
+				<form id="contact-form" action="https://formsubmit.co/Contactus@smartlinkco.jp" method="POST">
+					<!-- FormSubmit config: delivers submissions to Contactus@smartlinkco.jp -->
+					<input type="hidden" name="_subject" value="New inquiry from smartlinkco.jp">
+					<input type="hidden" name="_template" value="table">
+					<input type="hidden" name="_captcha" value="false">
+					<input type="hidden" name="_next" value="https://smartlinkco.jp/contact.html?sent=1">
+					<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 					<div class="row">
 						<div class="col-md-12 mb-4">
-							<label style="font-weight: bold; color: #333; margin-bottom: 8px; font-size: 15px;">
-								<span class="ja">貴社名 / Company Name</span><span
-									style="color: #e74c3c; margin-left: 5px;">*</span>
+							<label for="cf-company" style="font-weight: bold; color: #333; margin-bottom: 8px; font-size: 15px;">
+								<span class="ja">貴社名</span><span class="en">Company Name</span><span style="color: #e74c3c; margin-left: 5px;">*</span>
 							</label>
-							<input type="text" placeholder="Smart Link LLC"
+							<input id="cf-company" type="text" name="company" required autocomplete="organization" placeholder="株式会社〇〇 / Company Inc."
 								style="width: 100%; border: 1px solid #e0e0e0; padding: 15px; border-radius: 8px; background: #fdfdfd; outline: none;">
 						</div>
 
 						<div class="col-md-6 mb-4">
-							<label style="font-weight: bold; color: #333; margin-bottom: 8px; font-size: 15px;">
-								<span class="ja">ご担当者名 / Contact Name</span><span
-									style="color: #e74c3c; margin-left: 5px;">*</span>
+							<label for="cf-name" style="font-weight: bold; color: #333; margin-bottom: 8px; font-size: 15px;">
+								<span class="ja">ご担当者名</span><span class="en">Contact Name</span><span style="color: #e74c3c; margin-left: 5px;">*</span>
 							</label>
-							<input type="text" placeholder="John Doe"
+							<input id="cf-name" type="text" name="name" required autocomplete="name" placeholder="山田 太郎 / Taro Yamada"
 								style="width: 100%; border: 1px solid #e0e0e0; padding: 15px; border-radius: 8px; background: #fdfdfd; outline: none;">
 						</div>
 
 						<div class="col-md-6 mb-4">
-							<label style="font-weight: bold; color: #333; margin-bottom: 8px; font-size: 15px;">
-								<span class="ja">メールアドレス / Email Address</span><span
-									style="color: #e74c3c; margin-left: 5px;">*</span>
+							<label for="cf-email" style="font-weight: bold; color: #333; margin-bottom: 8px; font-size: 15px;">
+								<span class="ja">メールアドレス</span><span class="en">Email Address</span><span style="color: #e74c3c; margin-left: 5px;">*</span>
 							</label>
-							<input type="email" placeholder="contact@example.com"
+							<input id="cf-email" type="email" name="email" required autocomplete="email" placeholder="contact@example.com"
 								style="width: 100%; border: 1px solid #e0e0e0; padding: 15px; border-radius: 8px; background: #fdfdfd; outline: none;">
 						</div>
 
 						<div class="col-md-12 mb-4">
-							<label style="font-weight: bold; color: #333; margin-bottom: 8px; font-size: 15px;">
-								<span class="ja">お問い合わせ種類 / Inquiry Type</span>
+							<label for="cf-phone" style="font-weight: bold; color: #333; margin-bottom: 8px; font-size: 15px;">
+								<span class="ja">電話番号（任意）</span><span class="en">Phone (optional)</span>
 							</label>
-							<select
+							<input id="cf-phone" type="tel" name="phone" autocomplete="tel" placeholder="092-000-0000"
+								style="width: 100%; border: 1px solid #e0e0e0; padding: 15px; border-radius: 8px; background: #fdfdfd; outline: none;">
+						</div>
+
+						<div class="col-md-12 mb-4">
+							<label for="cf-type" style="font-weight: bold; color: #333; margin-bottom: 8px; font-size: 15px;">
+								<span class="ja">お問い合わせ種類</span><span class="en">Inquiry Type</span>
+							</label>
+							<select id="cf-type" name="inquiry_type"
 								style="width: 100%; border: 1px solid #e0e0e0; padding: 15px; border-radius: 8px; background: #fdfdfd; color: #555; -webkit-appearance: none; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 15px top 50%; background-size: 12px auto; outline: none;">
-								<option>無償サンプル依頼 / Free Sample Request</option>
-								<option>ROIシミュレーション依頼 / ROI Simulation Request</option>
-								<option>技術相談 / Technical Consultation</option>
-								<option>工場アセスメント / Factory Assessment</option>
-								<option>その他 / General Inquiry</option>
+								<option value="Free Sample Request">無償サンプル依頼 / Free Sample Request</option>
+								<option value="ROI Simulation Request">ROIシミュレーション依頼 / ROI Simulation Request</option>
+								<option value="Technical Consultation">技術相談 / Technical Consultation</option>
+								<option value="Factory Assessment">工場アセスメント / Factory Assessment</option>
+								<option value="General Inquiry">その他 / General Inquiry</option>
 							</select>
 						</div>
 
 						<div class="col-md-12 mb-4">
-							<label style="font-weight: bold; color: #333; margin-bottom: 8px; font-size: 15px;">
-								<span class="ja">詳細・ご要望 / Details</span>
+							<label for="cf-details" style="font-weight: bold; color: #333; margin-bottom: 8px; font-size: 15px;">
+								<span class="ja">詳細・ご要望</span><span class="en">Details</span>
 							</label>
-							<textarea rows="5" placeholder="How can we help you?"
+							<textarea id="cf-details" name="message" rows="5" placeholder="ご要望をご記入ください / How can we help you?"
 								style="width: 100%; border: 1px solid #e0e0e0; padding: 15px; border-radius: 8px; background: #fdfdfd; resize: vertical; outline: none;"></textarea>
 						</div>
 
 						<div class="col-md-12 text-center" style="margin-top: 20px;">
-							<button type="submit"
+							<button id="cf-submit" type="submit"
 								style="background: #003366; color: #fff; padding: 18px 45px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 18px; box-shadow: 0 5px 15px rgba(0,51,102,0.3); transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center;">
 								<span class="ja">送信する</span>
 								<span class="en">Submit Request</span>
@@ -126,6 +137,20 @@
 						</div>
 					</div>
 				</form>
+				<div id="cf-success" role="status" style="display:none; text-align:center; padding: 30px 10px;">
+					<i class="fas fa-check-circle" style="font-size: 48px; color: #0fc5d3;"></i>
+					<h3 style="color: #003366; font-weight: bold; margin-top: 15px;">
+						<span class="ja">送信が完了しました</span><span class="en">Thank you — your request was sent</span>
+					</h3>
+					<p style="color: #666; margin-top: 10px;">
+						<span class="ja">内容を確認のうえ、担当者より1営業日以内にご連絡いたします。</span>
+						<span class="en">Our team will review it and get back to you within one business day.</span>
+					</p>
+				</div>
+				<div id="cf-error" role="alert" style="display:none; margin-top: 20px; padding: 15px; border-radius: 8px; background: #fdecea; color: #b71c1c; text-align:center;">
+					<span class="ja">送信に失敗しました。お手数ですが Contactus@smartlinkco.jp まで直接ご連絡ください。</span>
+					<span class="en">Sending failed. Please email us directly at Contactus@smartlinkco.jp.</span>
+				</div>
 			</div>
 
 			<div class="row" style="margin-top: 50px;">
@@ -166,6 +191,32 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/b2b-portal-core.js"></script>
 	<script src="assets/js/script.js"></script>
+	<script>
+	(function () {
+		var form = document.getElementById('contact-form');
+		var ok = document.getElementById('cf-success');
+		var err = document.getElementById('cf-error');
+		var btn = document.getElementById('cf-submit');
+		if (location.search.indexOf('sent=1') !== -1) { form.style.display = 'none'; ok.style.display = 'block'; }
+		form.addEventListener('submit', function (e) {
+			if (!window.fetch || !window.FormData) return; // fall back to normal POST + redirect
+			e.preventDefault();
+			err.style.display = 'none';
+			btn.disabled = true; btn.style.opacity = '0.6';
+			fetch('https://formsubmit.co/ajax/Contactus@smartlinkco.jp', {
+				method: 'POST',
+				headers: { 'Accept': 'application/json' },
+				body: new FormData(form)
+			}).then(function (r) { return r.json(); }).then(function (d) {
+				if (d && (d.success === true || d.success === 'true')) {
+					form.style.display = 'none'; ok.style.display = 'block';
+				} else { throw new Error(d && d.message); }
+			}).catch(function () {
+				err.style.display = 'block'; btn.disabled = false; btn.style.opacity = '1';
+			});
+		});
+	})();
+	</script>
 </body>
 
 </html>
