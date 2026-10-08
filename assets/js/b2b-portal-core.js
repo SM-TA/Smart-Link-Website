@@ -289,7 +289,7 @@ const B2B_FOOTER_HTML = `
 		</div>
 		<div class="footer-copyright-text text-center" style="background: #000; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.05);">
 			<div class="container">
-				<p style="color: #666; font-size: 12px; margin: 0;">© 2026 Smart Link LLC (Smart Link 合同会社). All Rights Reserved.</p>
+				<p style="color: #666; font-size: 12px; margin: 0;">© 2026 Smart Link LLC (Smart Link合同会社). All Rights Reserved.</p>
 			</div>
 		</div>
 `;
