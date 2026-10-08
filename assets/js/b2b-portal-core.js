@@ -222,7 +222,7 @@ const B2B_HEADER_HTML = `
 				</nav>
 				<div class="site-search-btn float-right" style="margin-top: 10px;">
 					<div class="con-btn titan-cta text-center text-uppercase">
-						<a href="contact.html"><span class="ja">無償サンプル依頼</span><span class="en">Request Sample</span> <i class="fas fa-arrow-right"></i></a>
+						<a href="contact.html?type=sample"><span class="ja">無償サンプル依頼</span><span class="en">Request Sample</span> <i class="fas fa-arrow-right"></i></a>
 					</div>
 				</div>
 			</div>
@@ -351,7 +351,7 @@ const B2B_MOBILE_MENU_HTML = `
 					</ul>
 				</div>
 				<div class="mobile-consult-btn text-uppercase">
-					<a href="contact.html"><span class="ja">無償サンプル依頼</span><span class="en">Request Sample</span></a>
+					<a href="contact.html?type=sample"><span class="ja">無償サンプル依頼</span><span class="en">Request Sample</span></a>
 				</div>
 			</div>
 		</div>

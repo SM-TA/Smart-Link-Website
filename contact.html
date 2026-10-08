@@ -221,6 +221,9 @@
 		var err = document.getElementById('cf-error');
 		var btn = document.getElementById('cf-submit');
 		if (location.search.indexOf('sent=1') !== -1) { form.style.display = 'none'; ok.style.display = 'block'; }
+		var t = new URLSearchParams(location.search).get('type');
+		var map = { sample: 'Free Sample Request', roi: 'ROI Simulation Request', tech: 'Technical Consultation', assessment: 'Factory Assessment' };
+		if (t && map[t]) { document.getElementById('cf-type').value = map[t]; }
 		form.addEventListener('submit', function (e) {
 			if (!window.fetch || !window.FormData) return; // fall back to normal POST + redirect
 			e.preventDefault();

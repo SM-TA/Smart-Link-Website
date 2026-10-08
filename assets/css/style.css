@@ -3541,3 +3541,8 @@ select:visited {
 }
 /* Smart Link: keep aspect ratio for images with explicit width/height (zero specificity) */
 :where(img[width][height]) { height: auto; max-width: 100%; }
+
+/* Smart Link: mobile page headings (inline font-sizes are desktop-sized) */
+@media (max-width: 575px) {
+    section h1[style*="font-size"] { font-size: 32px !important; line-height: 1.3 !important; }
+}
