@@ -204,14 +204,6 @@ const B2B_HEADER_HTML = `
 									<ul class="dropdown-menu clearfix">
 										<li><a href="titan-about.html"><span class="ja">Titan LED 概要</span><span class="en">Titan LED Overview</span></a></li>
 										<li><a href="titan-led.html"><span class="ja">クリーンルーム用 (Spectrum Select)</span><span class="en">Cleanroom Series</span></a></li>
-										<li><a href="commercial-led.html"><span class="ja">業務用LEDチューブ</span><span class="en">Commercial LED</span></a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#"><span class="ja">Blue Frontier 空調</span><span class="en">Blue Frontier AC</span></a>
-									<ul class="dropdown-menu clearfix">
-										<li><a href="blue-frontier-history.html"><span class="ja">Blue Frontier 概要</span><span class="en">Blue Frontier Overview</span></a></li>
-										<li><a href="regenerative-ac.html"><span class="ja">技術・製品詳細</span><span class="en">Technology Details</span></a></li>
 									</ul>
 								</li>
 								<li>
@@ -276,8 +268,6 @@ const B2B_FOOTER_HTML = `
 								<h3 class="el-widget-title" style="color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 25px; border-left: 3px solid #0fc5d3; padding-left: 15px;"><span class="ja">ソリューション</span><span class="en">Solutions</span></h3>
 								<ul class="list-style-none footer-links" style="line-height: 2.5; font-size: 14px;">
 									<li><a href="titan-led.html" style="color: #bbb;"><span class="ja">クリーンルーム照明</span><span class="en">Cleanroom Lighting</span></a></li>
-									<li><a href="commercial-led.html" style="color: #bbb;"><span class="ja">業務用LEDチューブ</span><span class="en">Commercial LED</span></a></li>
-									<li><a href="regenerative-ac.html" style="color: #bbb;"><span class="ja">Blue Frontier 空調</span><span class="en">Blue Frontier AC</span></a></li>
 									<li><a href="software.html" style="color: #bbb;"><span class="ja">エネルギー管理ソフト</span><span class="en">Energy Software</span></a></li>
 								</ul>
 							</div>
@@ -343,14 +333,6 @@ const B2B_MOBILE_MENU_HTML = `
 									<ul class="dropdown-menu clearfix">
 										<li><a href="titan-about.html"><span class="ja">Titan LED 概要</span><span class="en">Titan LED Overview</span></a></li>
 										<li><a href="titan-led.html"><span class="ja">クリーンルーム用 (Spectrum Select)</span><span class="en">Cleanroom Series</span></a></li>
-										<li><a href="commercial-led.html"><span class="ja">業務用LEDチューブ</span><span class="en">Commercial LED</span></a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#"><span class="ja">Blue Frontier 空調</span><span class="en">Blue Frontier AC</span></a>
-									<ul class="dropdown-menu clearfix">
-										<li><a href="blue-frontier-history.html"><span class="ja">Blue Frontier 概要</span><span class="en">Blue Frontier Overview</span></a></li>
-										<li><a href="regenerative-ac.html"><span class="ja">技術・製品詳細</span><span class="en">Technology Details</span></a></li>
 									</ul>
 								</li>
 								<li>
