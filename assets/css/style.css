@@ -3565,3 +3565,9 @@ html.lang-en li > span.en, body.lang-en li > span.en { display: inline !importan
 }
 
 .list-style-none { list-style: none; padding-left: 0; }
+
+/* mobile menu logo: keep name on one line */
+.m-brand-logo .smart-link-logo-container .company-name { white-space: nowrap; font-size: 22px; }
+
+/* hero: English headline sized so the buttons stay above the info cards */
+.slider-style-one .main-slider-img-text .slider-content-box h1 .en { font-size: 0.75em; line-height: 1.2; }

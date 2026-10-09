@@ -197,15 +197,11 @@ const B2B_HEADER_HTML = `
 						<li><a href="index.html"><span class="ja">ホーム</span><span class="en">Home</span></a></li>
 						<li><a href="about.html"><span class="ja">会社概要</span><span class="en">About Us</span></a></li>
 						<li class="dropdown">
-							<a href="#"><span class="ja">製品情報</span><span class="en">Products</span></a>
+							<a href="#"><span class="ja">製品</span><span class="en">Products</span></a>
 							<ul class="dropdown-menu clearfix">
-								<li class="dropdown">
-									<a href="#"><span class="ja">LED照明</span><span class="en">LED Lighting</span></a>
-									<ul class="dropdown-menu clearfix">
-										<li><a href="titan-about.html"><span class="ja">Titan LED 概要</span><span class="en">Titan LED Overview</span></a></li>
-										<li><a href="titan-led.html"><span class="ja">クリーンルーム用 (Spectrum Select)</span><span class="en">Cleanroom Series</span></a></li>
-									</ul>
-								</li>
+								<li><a href="titan-led.html"><span class="ja">クリーンルーム用LED（SpectrumSelect Gold）</span><span class="en">Cleanroom LED (SpectrumSelect Gold)</span></a></li>
+								<li><a href="lighting.html"><span class="ja">製品ラインナップ・仕様書</span><span class="en">Lineup &amp; Spec Sheets</span></a></li>
+								<li><a href="titan-about.html"><span class="ja">Titan LEDについて</span><span class="en">About Titan LED</span></a></li>
 							</ul>
 						</li>
 						<li><a href="case-studies.html"><span class="ja">導入事例</span><span class="en">Case Studies</span></a></li>
@@ -262,9 +258,12 @@ const B2B_FOOTER_HTML = `
 						</div>
 						<div class="col-lg-2 col-md-6">
 							<div class="footer-widget-item">
-								<h3 class="el-widget-title" style="color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 25px; border-left: 3px solid #0fc5d3; padding-left: 15px;"><span class="ja">ソリューション</span><span class="en">Solutions</span></h3>
+								<h3 class="el-widget-title" style="color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 25px; border-left: 3px solid #0fc5d3; padding-left: 15px;"><span class="ja">製品・サービス</span><span class="en">Products</span></h3>
 								<ul class="list-style-none footer-links" style="line-height: 2.5; font-size: 14px;">
-									<li><a href="titan-led.html" style="color: #bbb;"><span class="ja">クリーンルーム照明</span><span class="en">Cleanroom Lighting</span></a></li>
+									<li><a href="titan-led.html" style="color: #bbb;"><span class="ja">クリーンルーム用LED</span><span class="en">Cleanroom LED</span></a></li>
+									<li><a href="lighting.html" style="color: #bbb;"><span class="ja">製品ラインナップ・仕様書</span><span class="en">Lineup &amp; Spec Sheets</span></a></li>
+									<li><a href="case-studies.html" style="color: #bbb;"><span class="ja">導入事例</span><span class="en">Case Studies</span></a></li>
+									<li><a href="contact.html?type=sample" style="color: #bbb;"><span class="ja">無償サンプル依頼</span><span class="en">Request a Sample</span></a></li>
 								</ul>
 							</div>
 						</div>
@@ -322,15 +321,11 @@ const B2B_MOBILE_MENU_HTML = `
 						<li><a href="index.html"><span class="ja">ホーム</span><span class="en">Home</span></a></li>
 						<li><a href="about.html"><span class="ja">会社概要</span><span class="en">About Us</span></a></li>
 						<li class="dropdown">
-							<a href="#"><span class="ja">製品情報</span><span class="en">Products</span></a>
+							<a href="#"><span class="ja">製品</span><span class="en">Products</span></a>
 							<ul class="dropdown-menu clearfix">
-								<li class="dropdown">
-									<a href="#"><span class="ja">LED照明</span><span class="en">LED Lighting</span></a>
-									<ul class="dropdown-menu clearfix">
-										<li><a href="titan-about.html"><span class="ja">Titan LED 概要</span><span class="en">Titan LED Overview</span></a></li>
-										<li><a href="titan-led.html"><span class="ja">クリーンルーム用 (Spectrum Select)</span><span class="en">Cleanroom Series</span></a></li>
-									</ul>
-								</li>
+								<li><a href="titan-led.html"><span class="ja">クリーンルーム用LED（SpectrumSelect Gold）</span><span class="en">Cleanroom LED (SpectrumSelect Gold)</span></a></li>
+								<li><a href="lighting.html"><span class="ja">製品ラインナップ・仕様書</span><span class="en">Lineup &amp; Spec Sheets</span></a></li>
+								<li><a href="titan-about.html"><span class="ja">Titan LEDについて</span><span class="en">About Titan LED</span></a></li>
 							</ul>
 						</li>
 						<li><a href="case-studies.html"><span class="ja">導入事例</span><span class="en">Case Studies</span></a></li>
@@ -382,12 +377,37 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Double-check correct button state
 	window.setLanguage(preferredLang);
 
-	// Re-run theme initializers if needed
-	if (typeof ELTRON !== 'undefined') {
-		// unbind existing events to prevent double binding
-		$('.s2-open_mobile_menu').off('click');
-		$('.el-mobile_menu li.dropdown .dropdown-btn').off('click');
-		
-		ELTRON.Basic.MobileMenu();
-	}
+	// Mobile menu: add dropdown toggles (handlers are delegated below, so load order doesn't matter)
+	document.querySelectorAll('.el-mobile_menu li.dropdown').forEach(function (li) {
+		if (li.querySelector(':scope > ul') && !li.querySelector(':scope > .dropdown-btn')) {
+			li.insertAdjacentHTML('beforeend', '<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>');
+		}
+	});
 });
+
+// Mobile menu open/close and submenu toggles (delegated; works on every page regardless of script order)
+(function () {
+	if (window.__slMobileMenuBound) return;
+	window.__slMobileMenuBound = true;
+	function toggleSub(li) {
+		var ul = li.querySelector(':scope > ul');
+		if (!ul) return;
+		var open = ul.style.display === 'block';
+		ul.style.display = open ? 'none' : 'block';
+		li.classList.toggle('submenu-open', !open);
+	}
+	document.addEventListener('click', function (e) {
+		var t = e.target.closest('.s2-open_mobile_menu');
+		if (t) {
+			e.preventDefault();
+			var w = document.querySelector('.el-mobile_menu_wrap');
+			if (w) w.classList.toggle('mobile_menu_on');
+			document.body.classList.toggle('mobile_menu_overlay_on');
+			return;
+		}
+		var btn = e.target.closest('.el-mobile_menu li.dropdown > .dropdown-btn');
+		if (btn) { toggleSub(btn.parentElement); return; }
+		var a = e.target.closest('.el-mobile_menu li.dropdown > a[href="#"]');
+		if (a) { e.preventDefault(); toggleSub(a.parentElement); }
+	});
+})();

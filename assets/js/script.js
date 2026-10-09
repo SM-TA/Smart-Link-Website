@@ -18,7 +18,7 @@ Last change:    00/00/00
 		Basic: {
 			init: function() {
 				var self = this;
-				['preloader','BackgroundImage','StickyMenu','MobileMenu','MianSlider','videoBox','bannerParalax','ProjectFilter','Animation','SerachForm','TestimonialSlider','counterUp','FeatureItemSlider','partnerItemSlider','scrollTop'].forEach(function (fn) {
+				['preloader','BackgroundImage','StickyMenu','MianSlider','videoBox','bannerParalax','ProjectFilter','Animation','SerachForm','TestimonialSlider','counterUp','FeatureItemSlider','partnerItemSlider','scrollTop'].forEach(function (fn) {
 					try { self[fn](); } catch (e) { /* plugin not loaded on this page */ }
 				});
 			},
