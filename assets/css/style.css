@@ -3571,3 +3571,10 @@ html.lang-en li > span.en, body.lang-en li > span.en { display: inline !importan
 
 /* hero: English headline sized so the buttons stay above the info cards */
 .slider-style-one .main-slider-img-text .slider-content-box h1 .en { font-size: 0.75em; line-height: 1.2; }
+
+/* Reserve the hero slider space before Owl Carousel initialises (was hidden, causing a large layout shift) */
+#slider-main.owl-carousel:not(.owl-loaded) { display: block; }
+/* Reserve space for the JS-injected header so the page doesn't jump when it appears */
+#header_id:not(:has(*)) { display: block; min-height: 90px; }
+@media (max-width: 379px) { #header_id:not(:has(*)) { min-height: 127px; } }
+@media (min-width: 992px) { #header_id:not(:has(*)) { min-height: 218px; } }
