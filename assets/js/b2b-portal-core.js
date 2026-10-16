@@ -38,6 +38,14 @@ window.getLanguageCookie = () => {
 	return "ja"; // Default to Japanese
 };
 
+// A ?lang=en / ?lang=ja link sets the language (so the toggle is a real, crawlable link)
+(function () {
+	try {
+		const q = new URLSearchParams(location.search).get('lang');
+		if (q === 'en' || q === 'ja') { window.setLanguageCookie(q); }
+	} catch (e) {}
+})();
+
 // --- 1. IMMEDIATE LANGUAGE INITIALIZATION ---
 (function () {
 	const preferredLang = window.getLanguageCookie();
@@ -156,8 +164,8 @@ const B2B_HEADER_HTML = `
 								<li> <i class="far fa-envelope"></i> <span class="copy-tooltip" onclick="window.copyToClipboard('Contactus@smartlinkco.jp', this)">Contactus@smartlinkco.jp</span></li>
 								<li class="lang-switcher-container" style="margin-left: 20px; display: inline-block; vertical-align: middle;">
 									<div class="lang-switch-pill" style="display: flex; background: rgba(0,0,0,0.2); border-radius: 20px; padding: 2px; border: 1px solid rgba(255,255,255,0.1);">
-										<a href="javascript:void(0)" onclick="setLanguage('ja')" id="btn-ja" class="btn-ja" style="padding: 2px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; transition: all 0.3s ease;">JP</a>
-										<a href="javascript:void(0)" onclick="setLanguage('en')" id="btn-en" class="btn-en" style="padding: 2px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; transition: all 0.3s ease;">EN</a>
+										<a href="?lang=ja" hreflang="ja" onclick="setLanguage('ja'); return false;" id="btn-ja" class="btn-ja" style="padding: 2px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; transition: all 0.3s ease;">JP</a>
+										<a href="?lang=en" hreflang="en" onclick="setLanguage('en'); return false;" id="btn-en" class="btn-en" style="padding: 2px 12px; font-size: 11px; font-weight: 800; border-radius: 18px; transition: all 0.3s ease;">EN</a>
 									</div>
 								</li>
 							</ul>
@@ -167,9 +175,7 @@ const B2B_HEADER_HTML = `
 						<div class="header_top_info float-right">
 							<div class="top_info_item top_info_menu ul-li clearfix">
 								<ul>
-									<li><a href="https://www.linkedin.com/company/smart-link-jp" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
-									<li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+									<li><a href="https://www.linkedin.com/company/smart-link-jp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
 									<li><a href="about.html"><span class="ja">企業情報</span><span class="en">Corporate Info</span></a></li>
 								</ul>
 							</div>
@@ -182,13 +188,13 @@ const B2B_HEADER_HTML = `
 			<div class="container">
 				<div class="brand-logo float-left" style="display: flex; align-items: center;">
 					<a href="index.html" class="smart-link-logo-container" style="margin-right: 15px;">
-						<img src="assets/img/logo/smart-link-logo-120.png" width="121" height="120" alt="Smart Link">
+						<img src="assets/img/logo/smart-link-logo-120.png" width="121" height="120" alt="">
 						<span class="company-name">Smart Link</span>
 					</a>
 					<div class="mobile-top-lang-switch d-md-none" style="display: inline-block;">
 						<div class="lang-switch-pill" style="display: flex; background: rgba(0,0,0,0.05); border-radius: 20px; padding: 2px; border: 1px solid rgba(0,0,0,0.1);">
-							<a href="javascript:void(0)" onclick="setLanguage('ja')" class="btn-ja" style="padding: 3px 10px; font-size: 11px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">JP</a>
-							<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 3px 10px; font-size: 11px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">EN</a>
+							<a href="?lang=ja" hreflang="ja" onclick="setLanguage('ja'); return false;" class="btn-ja" style="padding: 3px 10px; font-size: 11px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">JP</a>
+							<a href="?lang=en" hreflang="en" onclick="setLanguage('en'); return false;" class="btn-en" style="padding: 3px 10px; font-size: 11px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">EN</a>
 						</div>
 					</div>
 				</div>
@@ -234,7 +240,7 @@ const B2B_FOOTER_HTML = `
 							<div class="footer-widget-item pera-content">
 								<div class="footer-logo" style="margin-bottom: 25px;">
 									<a href="index.html" class="smart-link-logo-container">
-										<img src="assets/img/logo/smart-link-logo-120.png" width="121" height="120" alt="Smart Link" style="height: 40px; width: auto; margin-right: 15px;">
+										<img src="assets/img/logo/smart-link-logo-120.png" width="121" height="120" alt="" style="height: 40px; width: auto; margin-right: 15px;">
 										<span class="company-name" style="color: #fff; font-size: 24px; font-weight: 800;">Smart Link</span>
 									</a>
 								</div>
@@ -306,14 +312,14 @@ const B2B_MOBILE_MENU_HTML = `
 				</div>
 				<div class="m-brand-logo text-center">
 					<a href="index.html" class="smart-link-logo-container">
-						<img src="assets/img/logo/smart-link-logo-120.png" width="121" height="120" alt="Smart Link">
+						<img src="assets/img/logo/smart-link-logo-120.png" width="121" height="120" alt="">
 						<span class="company-name">Smart Link</span>
 					</a>
 				</div>
 				<div class="mobile-lang-switcher" style="padding-bottom: 20px; display: flex; justify-content: center; border-bottom: 1px solid rgba(0,0,0,0.05); margin-bottom: 20px;">
 					<div class="lang-switch-pill" style="display: flex; background: rgba(0,0,0,0.05); border-radius: 20px; padding: 4px; border: 1px solid rgba(0,0,0,0.1);">
-						<a href="javascript:void(0)" onclick="setLanguage('ja')" class="btn-ja" style="padding: 8px 25px; font-size: 14px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">日本語</a>
-						<a href="javascript:void(0)" onclick="setLanguage('en')" class="btn-en" style="padding: 8px 25px; font-size: 14px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">English</a>
+						<a href="?lang=ja" hreflang="ja" onclick="setLanguage('ja'); return false;" class="btn-ja" style="padding: 8px 25px; font-size: 14px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">日本語</a>
+						<a href="?lang=en" hreflang="en" onclick="setLanguage('en'); return false;" class="btn-en" style="padding: 8px 25px; font-size: 14px; font-weight: bold; border-radius: 18px; transition: all 0.3s ease;">English</a>
 					</div>
 				</div>
 				<nav class="el-mobile-main-navigation clearfix ul-li">
